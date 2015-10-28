@@ -34,8 +34,10 @@ end
 
 class CatsController < Phase5::ControllerBase
   def create
+
     @cat = Cat.new(params["cat"])
     if @cat.save
+      flash.generate(:message, "Awesome")
       redirect_to("/cats")
     else
       render :new
