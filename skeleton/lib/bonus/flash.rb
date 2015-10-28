@@ -29,7 +29,7 @@ module Phase5
     def messages
       messages = []
       @flash_now.each do |key, value|
-        messages << "#{key}=> #{value}"
+        messages << "#{value}"
       end
       messages.join("<br>")
     end

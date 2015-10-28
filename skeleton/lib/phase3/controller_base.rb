@@ -3,6 +3,8 @@ require 'active_support'
 require 'active_support/core_ext'
 require 'erb'
 
+require_relative '../bonus/flash.rb'
+
 module Phase3
   class ControllerBase < Phase2::ControllerBase
     # use ERB and binding to evaluate templates

@@ -1,4 +1,5 @@
 require 'webrick'
+require_relative '../lib/bonus/flash.rb'
 require_relative '../lib/phase3/controller_base'
 
 describe Phase3::ControllerBase do

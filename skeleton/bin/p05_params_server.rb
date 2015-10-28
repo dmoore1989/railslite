@@ -36,11 +36,11 @@ class CatsController < Phase5::ControllerBase
   def create
 
     @cat = Cat.new(params["cat"])
+    raise "Invalid authenitcation" unless authenticate_form
     if @cat.save
       flash['message'] = @cat.name
       flash.now('other', @cat.owner)
-      render :index
-      # redirect_to("/cats")
+      redirect_to("/cats")
     else
       render :new
     end
